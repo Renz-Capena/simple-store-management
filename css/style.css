@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: courier;
+}
+body{
+    background: linear-gradient(to top left,#B270A2, #FF8FB1);
+    height: 100vh;
+    text-align: center;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #7A4495;
+    padding: 10px 0px;
+    position: fixed;
+    width: 100vw;
+    /* display: none; */
+}
+header button,.itemsBtn,.deleteItemBtn,.inventoryBtn{
+    text-decoration: none;
+    padding: 5px;
+    background: none;
+    border: none;
+    /* border: 1px solid; */
+    box-shadow: 1px 1px 3px black;
+    border-radius: 5px;
+    color: white;
+    font-size: clamp(15px,4vw,20px);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+header button:hover,.formAddItems button:hover,#formAddItemsClose:hover,.itemsBtn:hover{
+    background-color: #B270A2;
+}
+/* ===========================formadditems */
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 3;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.486);
+    display: none;
+}
+.formAddItems{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 4;
+    margin-left: auto;
+    margin-right: auto;
+    position: fixed;
+    width: min(400px,90%);
+    margin-top: 10vh;
+    border: 1px solid;
+    padding: 20px 0px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px;
+    background-color: #B270A2;
+    /* display: none; */
+    transform: scale(0);
+    transition: 0.5s;
+}
+.formAddItems input{
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 3px;
+    font-family: 15px;
+    width: 70%;
+    text-transform:uppercase;
+}
+.formAddItems button{
+    padding: 5px;
+    background: none;
+    border: none;
+    background-color: #7A4495;
+    /* border: 1px solid; */
+    box-shadow: 1px 1px 3px black;
+    border-radius: 5px;
+    color: white;
+    width: 70%;
+    font-size: clamp(15px,5vw,20px);
+    transition: 0.5s;
+    cursor: pointer;
+}
+#formAddItemsClose{
+    padding: 5px;
+    width: 65%;
+    margin: auto;
+    background-color: #7A4495;
+    box-shadow: 1px 1px 3px black;
+    border-radius: 5px;
+    color: white;
+    font-size: clamp(15px,5vw,20px);
+    transition: 0.5s;
+    cursor: pointer;
+}
+/* ========================================tableItems */
+.tableItems{
+    /* border: 1px solid; */
+    width: min(1000px,98%);
+    margin: auto;
+    margin-top: 10vh;
+    border-collapse: collapse;
+}
+.tableItems th{
+    background-color: #B270A2;
+    border: 1px solid;
+    padding: 10px 3px;
+}
+.tableItems td{
+    border: 1px solid;
+    padding: 10px 3px;
+    text-transform: uppercase;
+    font-size: clamp(5px,5vw,20px);
+}
+.tableItems tbody tr td:nth-child(1){
+    background-color: #d88bc5;
+    text-align: left;
+}

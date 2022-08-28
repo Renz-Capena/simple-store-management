@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: courier;
+}
+body{
+    background: linear-gradient(to top left,#B270A2, #FF8FB1);
+    height: 100vh;
+    text-align: center;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #7A4495;
+    padding: 10px 0px;
+    position: fixed;
+    width: 100vw;
+    /* display: none; */
+}
+header a,header button{
+    text-decoration: none;
+    padding: 5px;
+    background: none;
+    border: none;
+    /* border: 1px solid; */
+    box-shadow: 1px 1px 3px black;
+    border-radius: 5px;
+    color: white;
+    font-size: clamp(15px,4vw,20px);
+    transition: 0.5s;
+    cursor: pointer;
+    margin-left: 10px;
+}
+header button{
+    background-color: #C21010;
+}
+header a:hover{
+    background-color: #B270A2;
+}
+/* ===================================soldForm */
+.soldForm{
+    /* border: 1px solid; */
+    width: min(400px,90%);
+    margin: auto;
+    margin-top: 8vh;
+    box-shadow: 2px 2px 5px;
+    background-color: #B270A2;
+    padding: 20px 0px;
+}
+.soldForm input{
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 3px;
+    font-family: 15px;
+    width: 70%;
+    text-transform:uppercase;
+}
+.soldForm button{
+    padding: 5px;
+    background: none;
+    border: none;
+    background-color: #7A4495;
+    /* border: 1px solid; */
+    box-shadow: 1px 1px 3px black;
+    border-radius: 5px;
+    color: white;
+    width: 74%;
+    font-size: clamp(15px,5vw,20px);
+    transition: 0.5s;
+    cursor: pointer;
+}
+/* ===============================soldItemsTable */
+.soldItemsTable{
+    /* border: 1px solid; */
+    width: min(1000px,98%);
+    margin: auto;
+    margin-top: 5vh;
+    border-collapse: collapse;
+}
+.soldItemsTable th{
+    background-color: #B270A2;
+    border: 1px solid;
+    padding: 10px 3px;
+}
+.soldItemsTable td{
+    border: 1px solid;
+    padding: 10px 3px;
+    text-transform: uppercase;
+    font-size: clamp(5px,5vw,20px);
+}
+.soldItemsTable tbody tr td:nth-child(1){
+    background-color: #d88bc5;
+    text-align: left;
+}
+.deleteSoldItemBtn{
+    text-decoration: none;
+    padding: 5px;
+    background: none;
+    border: none;
+    box-shadow: 1px 1px 3px black;
+    border-radius: 5px;
+    color: white;
+    font-size: clamp(15px,4vw,20px);
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: #7A4495;
+}
+/* ==================================deleteInventory_wrapper */
+.overlay{
+    height: 100vh;
+    width: 100vw;
+    background:rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 3;
+    display: none;
+}
+.deleteInventory_wrapper{
+    /* border: 1px solid; */
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+    background-color:#c00404;
+    color: white;
+    padding: 20px 0px;
+    width: min(400px,95%);
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px black;
+    position: fixed;
+    transform: scale(0);
+    transition: 0.5s;
+}
+.deleteInventory_wrapper button{
+    text-decoration: none;
+    padding: 5px;
+    background: none;
+    border: none;
+    box-shadow: 1px 1px 3px black;
+    border-radius: 5px;
+    color: white;
+    font-size: clamp(15px,4vw,20px);
+    transition: 0.5s;
+    cursor: pointer;
+    background-color:#7A4495;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 60%;
+    transition: 0.5s;
+}
+.deleteInventory_wrapper button:hover{
+    background-color:#B270A2;
+}
+/* ====================================totalSold_wrapper */
+.totalSold_wrapper{
+    /* border: 1px solid; */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: min(700px,100%);
+    position: fixed;
+    padding: 15px 0px;
+    background-color: #7A4495;
+    color: white;
+    /* display: none; */
+}
+.result_wrapper{
+    color: rgb(136, 240, 116);
+    font-size: 25px;
+    font-weight: bolder;
+}
